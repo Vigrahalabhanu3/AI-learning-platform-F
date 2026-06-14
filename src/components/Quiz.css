@@ -1,0 +1,142 @@
+.quiz-container {
+  padding: 2rem;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.quiz-header h4 {
+  font-size: 1.2rem;
+  color: var(--accent-primary);
+  margin: 0;
+}
+
+.quiz-progress {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.quiz-question h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.quiz-option:hover {
+  border-color: var(--accent-secondary);
+  background-color: var(--bg-tertiary);
+}
+
+.quiz-option.selected {
+  border-color: var(--accent-primary);
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.option-marker {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.quiz-option.selected .option-marker {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.option-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.quiz-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.quiz-results h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.score-display {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(99, 102, 241, 0.1);
+  border-radius: 20px;
+}
+
+.results-breakdown {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.result-item {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--bg-tertiary);
+}
+
+.result-q {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.text-success { color: #10b981; }
+.text-danger { color: #ef4444; }
+.p-4 { padding: 1.5rem; }
+.text-center { text-align: center; }
+
+.result-correction {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding-left: 2.25rem;
+}

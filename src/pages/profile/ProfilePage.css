@@ -1,0 +1,264 @@
+.profile-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.profile-header-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3B82F6;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.profile-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #fff;
+}
+
+.profile-email {
+  color: #9CA3AF;
+  margin: 0;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.profile-card {
+  background-color: #1F2937;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #374151;
+}
+
+.profile-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #F3F4F6;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 0.75rem;
+}
+
+/* Statistics */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.stat-box {
+  background-color: #111827;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #374151;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3B82F6;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+}
+
+/* Badges */
+.badges-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.badge-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #111827;
+  border: 1px solid #4B5563;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  color: #D1D5DB;
+}
+
+/* GitHub & LinkedIn Integration */
+.integration-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  color: white;
+}
+
+.github-btn {
+  background-color: #24292F;
+}
+.github-btn:hover {
+  background-color: #000000;
+}
+
+.linkedin-btn {
+  background-color: #0A66C2;
+}
+.linkedin-btn:hover {
+  background-color: #004182;
+}
+
+.repo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.repo-card {
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: #3B82F6;
+}
+.repo-card h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+.repo-card h4 a:hover {
+  text-decoration: underline;
+}
+
+.repo-desc {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.repo-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.repo-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #D1D5DB;
+  font-size: 0.875rem;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  color: white;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #3B82F6;
+}
+
+.btn-primary {
+  background-color: #3B82F6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: #2563EB;
+}
+
+.linkedin-data-item {
+  margin-bottom: 0.75rem;
+}
+.linkedin-data-item strong {
+  color: #F3F4F6;
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+.linkedin-data-item span {
+  color: #9CA3AF;
+  font-size: 0.875rem;
+}

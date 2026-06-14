@@ -1,0 +1,101 @@
+.notes-editor {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.notes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-tertiary);
+  border-radius: 16px 16px 0 0;
+}
+
+.notes-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.notes-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-secondary.sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.notes-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.notes-textarea {
+  flex: 1;
+  width: 100%;
+  resize: none;
+  border: none;
+  padding: 1.5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: transparent;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.notes-textarea:focus {
+  outline: none;
+}
+
+.markdown-preview {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  line-height: 1.6;
+}
+
+.markdown-preview h1, .markdown-preview h2, .markdown-preview h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.markdown-preview h1:first-child, .markdown-preview h2:first-child, .markdown-preview h3:first-child {
+  margin-top: 0;
+}
+
+.markdown-preview p {
+  margin-bottom: 1rem;
+  color: var(--text-secondary);
+}
+
+.markdown-preview ul, .markdown-preview ol {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  color: var(--text-secondary);
+}
+
+.markdown-preview code {
+  background-color: var(--bg-tertiary);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.empty-state {
+  color: var(--text-tertiary) !important;
+  font-style: italic;
+  text-align: center;
+  margin-top: 2rem;
+}

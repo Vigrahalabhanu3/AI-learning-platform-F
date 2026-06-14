@@ -1,0 +1,172 @@
+.video-player-wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.player-container {
+  position: relative;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background-color: #000;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.player-controls {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+}
+
+.player-title h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.player-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Most Advanced Complete Button */
+.btn-advanced-complete {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-top-color: rgba(255, 255, 255, 0.8);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(129, 140, 248, 0.9) 0%, rgba(79, 70, 229, 0.9) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    0 10px 20px rgba(79, 70, 229, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-advanced-complete:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 
+    0 15px 30px rgba(79, 70, 229, 0.6),
+    inset 0 2px 5px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, rgba(140, 150, 255, 1) 0%, rgba(99, 102, 241, 1) 100%);
+}
+
+.btn-advanced-complete:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 
+    0 5px 10px rgba(79, 70, 229, 0.3),
+    inset 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-advanced-complete::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: conic-gradient(from 0deg, transparent, rgba(255, 255, 255, 0.8), transparent 20%);
+  animation: radar-spin 4s linear infinite;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+@keyframes radar-spin {
+  100% { transform: rotate(360deg); }
+}
+
+/* Most Advanced Success Button */
+.btn-advanced-success {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-top-color: rgba(255, 255, 255, 0.9);
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  background: linear-gradient(180deg, rgba(52, 211, 153, 0.95) 0%, rgba(5, 150, 105, 0.95) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 
+    0 10px 20px rgba(5, 150, 105, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-advanced-success::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 51px;
+  background: linear-gradient(45deg, rgba(52, 211, 153, 0), rgba(255, 255, 255, 0.8), rgba(52, 211, 153, 0));
+  z-index: -1;
+  animation: shine-sweep 3s ease-in-out infinite alternate;
+}
+
+@keyframes shine-sweep {
+  0% { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(100%) skewX(-15deg); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .player-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .player-title h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .player-actions {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .btn-advanced-complete, 
+  .btn-advanced-success {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    flex-grow: 1;
+    justify-content: center;
+  }
+  
+  .icon-btn.ml-2 {
+    margin-left: 0;
+  }
+}

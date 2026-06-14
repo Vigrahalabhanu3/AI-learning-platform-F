@@ -1,0 +1,83 @@
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  z-index: 9999;
+}
+
+.loader-container.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-primary);
+  backdrop-filter: blur(10px);
+}
+
+.loader-container.inline {
+  width: 100%;
+  padding: 4rem 2rem;
+  min-height: 300px;
+}
+
+/* Google Style Loader */
+.google-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.google-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  animation: googleBounce 1.4s infinite ease-in-out both;
+}
+
+.google-loader.small {
+  gap: 4px;
+}
+
+.google-loader.small .google-dot {
+  width: 8px;
+  height: 8px;
+}
+
+.loader-container.small {
+  display: inline-flex;
+  padding: 0;
+  min-height: auto;
+}
+
+.google-dot.blue {
+  background-color: #4285F4;
+  animation-delay: -0.32s;
+}
+
+.google-dot.red {
+  background-color: #EA4335;
+  animation-delay: -0.16s;
+}
+
+.google-dot.yellow {
+  background-color: #FBBC05;
+  animation-delay: 0s;
+}
+
+.google-dot.green {
+  background-color: #34A853;
+  animation-delay: 0.16s;
+}
+
+@keyframes googleBounce {
+  0%, 80%, 100% { 
+    transform: scale(0);
+  } 
+  40% { 
+    transform: scale(1);
+  }
+}
